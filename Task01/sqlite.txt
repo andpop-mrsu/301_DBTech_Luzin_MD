@@ -1,0 +1,2 @@
+sqlite 3.50.4
+csv, column, html, insert, line, list, tabs, tcl
