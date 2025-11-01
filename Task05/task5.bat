@@ -15,7 +15,7 @@ echo " "
 
 echo "3. Посчитайте количество фильмов в каждом жанре. Выведите два столбца: genre и movie_count, отсортировав результат по убыванию количества фильмов."
 echo --------------------------------------------------
-sqlite3 movies_rating.db -box -echo "SELECT g.genre_name AS genre, COUNT(DISTINCT mg.movie_id) AS movie_count FROM Genres g LEFT JOIN Movie_Genres mg ON g.genre_id = mg.genre_id GROUP BY g.genre_name ORDER BY movie_count DESC;
+sqlite3 movies_rating.db -box -echo "SELECT g.genre_name AS genre, COUNT(DISTINCT mg.movie_id) AS movie_count FROM Genres g LEFT JOIN Movie_Genres mg ON g.genre_id = mg.genre_id GROUP BY g.genre_name ORDER BY movie_count DESC;"
 echo " "
 
 echo "4. Найдите жанры, в которых чаще всего оставляют теги (комментарии). Для этого подсчитайте общее количество записей в таблице tags для фильмов каждого жанра. Выведите genre, tag_count и долю этого жанра в общем числе тегов (tag_share), выраженную в процентах."
